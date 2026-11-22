@@ -1,0 +1,1795 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>腐剧tv入口 - 官方品牌门户,高清正版影视社区</title>
+<meta name="description" content="腐剧tv入口官方网站，专注高清正版耽美影视内容平台，汇聚优质创作者与精品剧集，打造值得信赖的影视内容生态社区。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1130'/%3E%3Cpath d='M18 20h12v24H18zM34 20h12v24H34z' fill='%23e879b8'/%3E%3Ccircle cx='32' cy='44' r='4' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --fu-deep:#1a1130;
+  --fu-deeper:#120c22;
+  --fu-pink:#e879b8;
+  --fu-pink-soft:#f7cfe6;
+  --fu-lilac:#9b8cff;
+  --fu-lilac-soft:#d9d3ff;
+  --fu-gold:#ffd166;
+  --fu-mint:#79e0c9;
+  --fu-paper:#f7f4fb;
+  --fu-ink:#241b3a;
+  --fu-muted:#6a6080;
+  --fu-line:#e5dff2;
+  --fu-card:#ffffff;
+  --fu-shadow:0 14px 40px -18px rgba(26,17,48,.35);
+  --fu-radius:18px;
+  --fu-max:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:118px;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--fu-ink);
+  background:var(--fu-paper);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800;}
+p{margin:0;}
+ul{margin:0;padding:0;list-style:none;}
+
+/* ===== 吸顶: 公告 + 页头 ===== */
+.fu-sticky-wrap{
+  position:sticky;
+  top:0;
+  z-index:200;
+}
+.fu-announce{
+  background:linear-gradient(90deg,var(--fu-deep),#3a1f5e 55%,#5a2a63);
+  color:#f3ecff;
+  font-size:13px;
+  padding:9px 20px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  text-align:center;
+}
+.fu-announce .fu-announce-badge{
+  background:var(--fu-pink);
+  color:#2a0f28;
+  font-weight:800;
+  border-radius:999px;
+  padding:1px 10px;
+  font-size:12px;
+  letter-spacing:.5px;
+}
+.fu-announce a{text-decoration:underline;text-underline-offset:3px;color:var(--fu-gold);}
+
+.fu-header{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--fu-line);
+}
+.fu-header-inner{
+  max-width:var(--fu-max);
+  margin:0 auto;
+  padding:12px 22px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.fu-brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  flex-shrink:0;
+}
+.fu-brand-mark{
+  width:42px;height:42px;
+  border-radius:13px;
+  background:linear-gradient(140deg,var(--fu-deep),var(--fu-lilac));
+  display:grid;place-items:center;
+  color:#fff;font-weight:900;font-size:19px;
+  box-shadow:0 8px 20px -8px rgba(155,140,255,.8);
+}
+.fu-brand-text b{display:block;font-size:17px;letter-spacing:.5px;}
+.fu-brand-text span{font-size:11.5px;color:var(--fu-muted);letter-spacing:2px;}
+.fu-nav{
+  display:flex;
+  gap:4px;
+  margin-left:6px;
+  flex-wrap:wrap;
+}
+.fu-nav a{
+  font-size:14.5px;
+  font-weight:600;
+  padding:8px 12px;
+  border-radius:10px;
+  color:#3b2f55;
+  transition:.2s;
+}
+.fu-nav a:hover{background:var(--fu-lilac-soft);color:var(--fu-deep);}
+.fu-header-tools{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.fu-search{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+.fu-search input{
+  width:200px;
+  padding:9px 14px 9px 34px;
+  border:1.5px solid var(--fu-line);
+  border-radius:999px;
+  font-size:13.5px;
+  background:#fbf9ff;
+  outline:none;
+  transition:.22s;
+  color:var(--fu-ink);
+}
+.fu-search input:focus{
+  border-color:var(--fu-lilac);
+  width:238px;
+  box-shadow:0 0 0 4px rgba(155,140,255,.16);
+}
+.fu-search .fu-search-ico{
+  position:absolute;left:12px;font-size:14px;opacity:.55;pointer-events:none;
+}
+.fu-search-tip{
+  position:absolute;
+  top:calc(100% + 8px);
+  left:0;right:0;
+  background:#fff;
+  border:1px solid var(--fu-line);
+  border-radius:12px;
+  box-shadow:var(--fu-shadow);
+  padding:8px;
+  font-size:13px;
+  display:none;
+  z-index:60;
+  min-width:250px;
+}
+.fu-search-tip.fu-show{display:block;}
+.fu-search-tip div{
+  padding:6px 9px;border-radius:8px;color:#40335e;cursor:pointer;
+}
+.fu-search-tip div:hover{background:var(--fu-lilac-soft);}
+.fu-search-tip .fu-tip-empty{color:#a59cc0;cursor:default;}
+
+.fu-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  font-weight:700;
+  font-size:14px;
+  padding:10px 20px;
+  border-radius:999px;
+  transition:.22s;
+  white-space:nowrap;
+}
+.fu-btn-primary{
+  background:linear-gradient(120deg,var(--fu-pink),var(--fu-lilac));
+  color:#fff;
+  box-shadow:0 10px 24px -12px rgba(232,121,184,.9);
+}
+.fu-btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(232,121,184,.95);}
+.fu-btn-ghost{
+  border:1.5px solid var(--fu-line);
+  color:var(--fu-deep);
+  background:#fff;
+}
+.fu-btn-ghost:hover{border-color:var(--fu-lilac);color:var(--fu-lilac);}
+.fu-burger{
+  display:none;
+  width:42px;height:42px;
+  border-radius:11px;
+  border:1.5px solid var(--fu-line);
+  background:#fff;
+  font-size:19px;
+  color:var(--fu-deep);
+}
+.fu-mobile-nav{
+  display:none;
+  padding:0 18px 16px;
+  background:#fff;
+  border-bottom:1px solid var(--fu-line);
+  flex-direction:column;
+  gap:2px;
+}
+.fu-mobile-nav.fu-open{display:flex;}
+.fu-mobile-nav a{
+  padding:11px 12px;border-radius:10px;font-weight:600;font-size:14.5px;color:#3b2f55;
+}
+.fu-mobile-nav a:hover{background:var(--fu-lilac-soft);}
+
+/* ===== 布局通用 ===== */
+.fu-container{max-width:var(--fu-max);margin:0 auto;padding:0 22px;}
+.fu-section{padding:64px 0;}
+.fu-section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:32px;
+  flex-wrap:wrap;
+}
+.fu-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:12.5px;
+  font-weight:800;
+  letter-spacing:2.5px;
+  color:var(--fu-lilac);
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.fu-eyebrow::before{
+  content:"";
+  width:22px;height:2px;
+  background:var(--fu-pink);
+  display:inline-block;
+}
+.fu-section-head h2{
+  font-size:clamp(24px,3.4vw,34px);
+  letter-spacing:-.5px;
+}
+.fu-section-head p{
+  color:var(--fu-muted);
+  font-size:14.5px;
+  max-width:520px;
+  margin-top:8px;
+}
+
+/* ===== 首屏 (4:6 大幅图文) ===== */
+.fu-hero{
+  background:
+    radial-gradient(1000px 480px at 92% -6%,rgba(155,140,255,.28),transparent 60%),
+    radial-gradient(760px 460px at 4% 104%,rgba(232,121,184,.24),transparent 60%),
+    linear-gradient(165deg,#170f2b,#241840 62%,#1b1233);
+  color:#f4f0ff;
+  padding:66px 0 74px;
+  overflow:hidden;
+}
+.fu-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,4fr) minmax(0,6fr);
+  gap:46px;
+  align-items:center;
+}
+.fu-hero h1{
+  font-size:clamp(34px,5.4vw,56px);
+  letter-spacing:-1.5px;
+  line-height:1.12;
+  margin-bottom:14px;
+  background:linear-gradient(100deg,#ffffff,#f7cfe6 55%,var(--fu-gold));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.fu-hero-official{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:12.5px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  color:#2a0f28;
+  background:var(--fu-gold);
+  padding:4px 13px;
+  border-radius:999px;
+  margin-bottom:20px;
+}
+.fu-hero-lead{
+  font-size:16px;
+  color:#cfc6e8;
+  max-width:520px;
+  margin-bottom:22px;
+}
+.fu-hero-desc{
+  font-size:14.5px;
+  color:#b7acd3;
+  border-left:3px solid rgba(232,121,184,.6);
+  padding-left:16px;
+  margin-bottom:26px;
+  max-width:540px;
+}
+.fu-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px;}
+.fu-stats{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  border-top:1px solid rgba(255,255,255,.13);
+  padding-top:22px;
+  max-width:520px;
+}
+.fu-stat b{
+  display:block;
+  font-size:clamp(22px,3vw,30px);
+  color:#fff;
+  letter-spacing:-.5px;
+}
+.fu-stat span{font-size:12.5px;color:#a99ec4;letter-spacing:.5px;}
+
+.fu-hero-visual{
+  position:relative;
+}
+.fu-hero-frame{
+  position:relative;
+  border-radius:26px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 40px 70px -40px rgba(0,0,0,.9);
+  aspect-ratio:16/10;
+  background:#0f0a1e;
+}
+.fu-hero-frame img{width:100%;height:100%;object-fit:cover;}
+.fu-hero-play{
+  position:absolute;
+  left:20px;bottom:20px;
+  display:flex;align-items:center;gap:12px;
+  background:rgba(18,12,34,.72);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:14px;
+  padding:10px 16px 10px 10px;
+}
+.fu-hero-play-ico{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--fu-pink);
+  display:grid;place-items:center;
+  color:#2a0f28;font-size:15px;font-weight:900;
+}
+.fu-hero-play b{display:block;font-size:13.5px;color:#fff;}
+.fu-hero-play span{font-size:11.5px;color:#c2b8db;}
+.fu-hero-float{
+  position:absolute;
+  right:-16px;top:-18px;
+  background:#fff;
+  color:var(--fu-deep);
+  border-radius:14px;
+  padding:10px 15px;
+  font-size:12.5px;
+  font-weight:800;
+  box-shadow:0 18px 32px -16px rgba(0,0,0,.6);
+  display:flex;align-items:center;gap:8px;
+}
+.fu-hero-float b{color:var(--fu-pink);font-size:15px;}
+
+/* ===== 品牌解析(关键词解析) ===== */
+.fu-about-grid{
+  display:grid;
+  grid-template-columns:minmax(0,7fr) minmax(0,5fr);
+  gap:40px;
+  align-items:start;
+}
+.fu-prose p{margin-bottom:16px;color:#3b3253;font-size:15px;}
+.fu-prose h3{
+  font-size:20px;
+  margin:26px 0 12px;
+  color:var(--fu-deep);
+  display:flex;align-items:center;gap:10px;
+}
+.fu-prose h3::before{
+  content:"";
+  width:8px;height:8px;border-radius:50%;
+  background:linear-gradient(120deg,var(--fu-pink),var(--fu-lilac));
+  flex-shrink:0;
+}
+.fu-prose blockquote{
+  margin:18px 0;
+  padding:16px 20px;
+  background:#fff;
+  border-left:4px solid var(--fu-pink);
+  border-radius:0 12px 12px 0;
+  font-size:14.5px;
+  color:#4a3f66;
+  box-shadow:var(--fu-shadow);
+}
+.fu-aside-card{
+  background:linear-gradient(160deg,#221641,#2f1f57);
+  color:#eee8ff;
+  border-radius:var(--fu-radius);
+  padding:26px;
+  box-shadow:var(--fu-shadow);
+  position:sticky;
+  top:150px;
+}
+.fu-aside-card h3{font-size:18px;margin-bottom:14px;color:#fff;}
+.fu-aside-card li{
+  display:flex;gap:11px;
+  font-size:13.8px;
+  color:#c9bfe4;
+  padding:9px 0;
+  border-bottom:1px dashed rgba(255,255,255,.12);
+}
+.fu-aside-card li:last-child{border-bottom:none;}
+.fu-aside-card li span{color:var(--fu-gold);font-weight:800;flex-shrink:0;}
+
+/* ===== 焦点内容 ===== */
+.fu-focus-grid{
+  display:grid;
+  grid-template-columns:minmax(0,7fr) minmax(0,5fr);
+  gap:26px;
+  align-items:start;
+}
+.fu-focus-main{
+  border-radius:var(--fu-radius);
+  overflow:hidden;
+  background:#fff;
+  box-shadow:var(--fu-shadow);
+  transition:.28s;
+}
+.fu-focus-main:hover{transform:translateY(-4px);box-shadow:0 26px 48px -24px rgba(26,17,48,.45);}
+.fu-focus-cover{
+  position:relative;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#1a1130;
+}
+.fu-focus-cover img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+.fu-focus-main:hover .fu-focus-cover img{transform:scale(1.045);}
+.fu-focus-tag{
+  position:absolute;left:14px;top:14px;
+  background:var(--fu-gold);color:#2a1a08;
+  font-size:12px;font-weight:800;
+  padding:3px 11px;border-radius:999px;
+}
+.fu-focus-body{padding:20px 22px 22px;}
+.fu-focus-body h3{font-size:21px;margin-bottom:9px;}
+.fu-focus-body p{font-size:14px;color:var(--fu-muted);margin-bottom:14px;}
+.fu-meta{
+  display:flex;flex-wrap:wrap;gap:14px;
+  font-size:12.5px;color:#8b81a6;
+  margin-bottom:14px;
+}
+.fu-meta b{color:#4a3f66;font-weight:700;}
+
+.fu-focus-list{display:flex;flex-direction:column;gap:14px;}
+.fu-focus-item{
+  display:grid;
+  grid-template-columns:104px minmax(0,1fr);
+  gap:15px;
+  background:#fff;
+  border-radius:14px;
+  padding:12px;
+  box-shadow:0 8px 24px -18px rgba(26,17,48,.5);
+  transition:.24s;
+  border:1px solid transparent;
+}
+.fu-focus-item:hover{border-color:var(--fu-lilac-soft);transform:translateX(3px);}
+.fu-focus-item img{
+  width:104px;height:74px;object-fit:cover;border-radius:10px;
+}
+.fu-focus-item h4{font-size:15px;margin-bottom:5px;line-height:1.45;}
+.fu-focus-item p{font-size:12.5px;color:var(--fu-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.fu-focus-item .fu-meta{margin:6px 0 0;font-size:11.5px;}
+
+/* ===== 视频流: 三列等高卡片 ===== */
+.fu-video-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+.fu-video-card{
+  background:#fff;
+  border-radius:var(--fu-radius);
+  overflow:hidden;
+  box-shadow:0 12px 32px -22px rgba(26,17,48,.55);
+  display:flex;flex-direction:column;
+  transition:.26s;
+  border:1px solid #f0ebfa;
+}
+.fu-video-card:hover{transform:translateY(-5px);box-shadow:0 26px 44px -26px rgba(26,17,48,.5);}
+.fu-video-thumb{
+  position:relative;aspect-ratio:16/9;overflow:hidden;background:#211640;
+}
+.fu-video-thumb img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+.fu-video-card:hover .fu-video-thumb img{transform:scale(1.06);}
+.fu-video-dur{
+  position:absolute;right:10px;bottom:10px;
+  background:rgba(18,12,34,.82);
+  color:#fff;font-size:11.5px;
+  padding:2px 8px;border-radius:6px;
+  font-weight:700;
+}
+.fu-video-body{padding:16px 17px 18px;display:flex;flex-direction:column;flex:1;}
+.fu-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px;}
+.fu-tag{
+  font-size:11px;font-weight:700;
+  background:var(--fu-lilac-soft);
+  color:#4c3c8c;
+  padding:2px 9px;border-radius:999px;
+}
+.fu-tag-pink{background:var(--fu-pink-soft);color:#8a2c62;}
+.fu-tag-mint{background:#d3f5ed;color:#1f6a5a;}
+.fu-video-body h3{font-size:16px;line-height:1.45;margin-bottom:7px;}
+.fu-video-body p{font-size:13px;color:var(--fu-muted);flex:1;}
+.fu-video-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;margin-top:14px;padding-top:13px;
+  border-top:1px solid #f1ecfa;
+  font-size:12px;color:#8b81a6;
+}
+.fu-author-chip{display:flex;align-items:center;gap:7px;}
+.fu-avatar{
+  width:26px;height:26px;border-radius:50%;
+  display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#fff;
+  flex-shrink:0;
+}
+.fu-avatar-a{background:linear-gradient(135deg,#e879b8,#9b8cff);}
+.fu-avatar-b{background:linear-gradient(135deg,#ffb26b,#e879b8);}
+.fu-avatar-c{background:linear-gradient(135deg,#79e0c9,#5b8def);}
+.fu-avatar-d{background:linear-gradient(135deg,#9b8cff,#5b8def);}
+.fu-avatar-e{background:linear-gradient(135deg,#ffd166,#f2947a);}
+.fu-avatar-f{background:linear-gradient(135deg,#f2947a,#c05c9a);}
+.fu-actions{display:flex;gap:6px;}
+.fu-icon-btn{
+  width:30px;height:30px;border-radius:9px;
+  display:grid;place-items:center;
+  font-size:13px;
+  background:#f6f2ff;
+  color:#6f6490;
+  transition:.2s;
+}
+.fu-icon-btn:hover{background:var(--fu-lilac-soft);color:var(--fu-deep);}
+.fu-icon-btn.fu-liked{background:var(--fu-pink);color:#fff;}
+.fu-icon-btn.fu-saved{background:var(--fu-gold);color:#3a2a00;}
+
+/* ===== 专题 ===== */
+.fu-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+.fu-topic{
+  background:#fff;border-radius:var(--fu-radius);
+  padding:22px;box-shadow:var(--fu-shadow);
+  border-top:4px solid var(--fu-pink);
+  transition:.25s;
+}
+.fu-topic:nth-child(2){border-top-color:var(--fu-lilac);}
+.fu-topic:nth-child(3){border-top-color:var(--fu-mint);}
+.fu-topic:nth-child(4){border-top-color:var(--fu-gold);}
+.fu-topic:hover{transform:translateY(-4px);}
+.fu-topic-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px;}
+.fu-topic h3{font-size:18px;}
+.fu-status{
+  font-size:11.5px;font-weight:800;
+  padding:2px 10px;border-radius:999px;
+  background:#eafaf4;color:#1f7a5f;white-space:nowrap;
+}
+.fu-topic>p{font-size:13.5px;color:var(--fu-muted);margin-bottom:14px;}
+.fu-topic-list li{
+  font-size:13.5px;
+  padding:8px 0 8px 20px;
+  border-bottom:1px dashed #eee8f8;
+  position:relative;
+  color:#463a63;
+}
+.fu-topic-list li:last-child{border-bottom:none;}
+.fu-topic-list li::before{
+  content:"▶";
+  position:absolute;left:0;top:9px;
+  font-size:9px;color:var(--fu-pink);
+}
+
+/* ===== 创作者: 双列简介 ===== */
+.fu-creator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.fu-creator{
+  display:grid;
+  grid-template-columns:70px minmax(0,1fr);
+  gap:16px;
+  background:#fff;
+  border-radius:var(--fu-radius);
+  padding:20px;
+  box-shadow:0 10px 28px -22px rgba(26,17,48,.55);
+  border:1px solid #f0ebfa;
+  transition:.24s;
+}
+.fu-creator:hover{border-color:var(--fu-lilac-soft);box-shadow:0 20px 40px -26px rgba(26,17,48,.55);}
+.fu-creator-avatar{
+  width:70px;height:70px;border-radius:20px;
+  display:grid;place-items:center;
+  font-size:26px;font-weight:900;color:#fff;
+}
+.fu-creator h3{font-size:16.5px;margin-bottom:3px;}
+.fu-creator .fu-field{font-size:12.5px;color:var(--fu-lilac);font-weight:700;margin-bottom:7px;}
+.fu-creator p{font-size:13px;color:var(--fu-muted);line-height:1.65;margin-bottom:10px;}
+.fu-creator-stats{display:flex;gap:16px;font-size:12px;color:#8b81a6;}
+.fu-creator-stats b{color:#3b2f55;}
+
+/* ===== 用户评价: 双列短评 ===== */
+.fu-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.fu-review{
+  background:#fff;
+  border-radius:14px;
+  padding:18px 20px;
+  box-shadow:0 8px 24px -20px rgba(26,17,48,.5);
+  border-left:3px solid var(--fu-lilac-soft);
+  transition:.22s;
+}
+.fu-review:hover{border-left-color:var(--fu-pink);transform:translateY(-2px);}
+.fu-review-head{display:flex;align-items:center;gap:9px;margin-bottom:9px;}
+.fu-review-head b{font-size:13.5px;}
+.fu-review-head span{font-size:11.5px;color:#a59cc0;margin-left:auto;}
+.fu-stars{color:var(--fu-gold);font-size:12px;letter-spacing:1px;}
+.fu-review p{font-size:13.5px;color:#4a3f66;line-height:1.7;}
+
+/* ===== 企业动态 & 合作 ===== */
+.fu-news-coop{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:26px;align-items:start;}
+.fu-news{background:#fff;border-radius:var(--fu-radius);padding:8px 22px;box-shadow:var(--fu-shadow);}
+.fu-news li{
+  display:flex;gap:16px;
+  padding:16px 0;
+  border-bottom:1px solid #f1ecfa;
+  font-size:14px;
+  align-items:flex-start;
+}
+.fu-news li:last-child{border-bottom:none;}
+.fu-news time{font-size:12px;color:var(--fu-pink);font-weight:800;flex-shrink:0;width:78px;}
+.fu-news div b{display:block;font-size:14.5px;margin-bottom:3px;}
+.fu-news div span{font-size:13px;color:var(--fu-muted);}
+
+.fu-coop{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.fu-coop-item{
+  background:#fff;
+  border-radius:13px;
+  padding:16px 14px;
+  text-align:center;
+  font-size:13px;
+  font-weight:700;
+  color:#453863;
+  box-shadow:0 8px 22px -20px rgba(26,17,48,.5);
+  border:1px solid #f2edfa;
+  transition:.22s;
+}
+.fu-coop-item:hover{color:var(--fu-lilac);border-color:var(--fu-lilac-soft);}
+.fu-coop-item small{display:block;font-size:11px;color:#a59cc0;font-weight:600;margin-top:3px;}
+
+/* ===== FAQ ===== */
+.fu-faq{max-width:820px;margin:0 auto;}
+.fu-faq details{
+  background:#fff;
+  border-radius:13px;
+  padding:2px 20px;
+  margin-bottom:11px;
+  box-shadow:0 6px 20px -18px rgba(26,17,48,.5);
+  border:1px solid #f2edfa;
+}
+.fu-faq summary{
+  cursor:pointer;
+  font-weight:700;
+  font-size:14.5px;
+  padding:15px 0;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+}
+.fu-faq summary::-webkit-details-marker{display:none;}
+.fu-faq summary::after{
+  content:"+";
+  font-size:19px;
+  color:var(--fu-lilac);
+  font-weight:600;
+  transition:.2s;
+}
+.fu-faq details[open] summary::after{content:"−";}
+.fu-faq details p{font-size:13.5px;color:var(--fu-muted);padding:0 0 16px;}
+
+/* ===== 投稿横幅 ===== */
+.fu-cta{
+  background:linear-gradient(120deg,#221641,#3a1f5e 52%,#5a2a63);
+  border-radius:24px;
+  color:#f3ecff;
+  padding:44px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  flex-wrap:wrap;
+  box-shadow:0 30px 60px -34px rgba(26,17,48,.8);
+}
+.fu-cta h2{font-size:clamp(22px,3vw,30px);margin-bottom:8px;}
+.fu-cta p{font-size:14px;color:#c9bfe4;max-width:520px;}
+
+/* ===== 页脚 ===== */
+.fu-footer{
+  background:#120c22;
+  color:#a99ec4;
+  padding:54px 0 26px;
+  font-size:13.5px;
+}
+.fu-footer-grid{
+  display:grid;
+  grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));
+  gap:32px;
+  margin-bottom:34px;
+}
+.fu-footer-brand .fu-brand-text b{color:#fff;}
+.fu-footer-brand .fu-brand-text span{color:#8479a3;}
+.fu-footer-brand p{margin-top:14px;font-size:13px;line-height:1.75;max-width:300px;color:#9086ad;}
+.fu-footer h4{color:#fff;font-size:14px;margin-bottom:13px;letter-spacing:.5px;}
+.fu-footer li{margin-bottom:8px;}
+.fu-footer li a{font-size:13px;color:#a99ec4;transition:.2s;}
+.fu-footer li a:hover{color:var(--fu-pink);}
+.fu-footer-bottom{
+  border-top:1px solid #251b40;
+  padding-top:22px;
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  font-size:12.5px;
+  color:#7a7099;
+}
+
+/* ===== 回到顶部 & Toast & 弹窗 ===== */
+.fu-top{
+  position:fixed;
+  right:22px;bottom:26px;
+  width:46px;height:46px;
+  border-radius:14px;
+  background:var(--fu-deep);
+  color:#fff;
+  font-size:17px;
+  display:grid;place-items:center;
+  box-shadow:0 14px 30px -14px rgba(26,17,48,.85);
+  opacity:0;
+  pointer-events:none;
+  transition:.28s;
+  z-index:150;
+}
+.fu-top.fu-show{opacity:1;pointer-events:auto;}
+.fu-top:hover{background:var(--fu-pink);}
+
+.fu-toast{
+  position:fixed;
+  left:50%;bottom:34px;
+  transform:translate(-50%,20px);
+  background:#1a1130;
+  color:#fff;
+  font-size:13.5px;
+  font-weight:600;
+  padding:11px 22px;
+  border-radius:999px;
+  box-shadow:0 18px 40px -18px rgba(0,0,0,.7);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:400;
+  max-width:88vw;
+  text-align:center;
+}
+.fu-toast.fu-show{opacity:1;transform:translate(-50%,0);}
+
+.fu-modal-mask{
+  position:fixed;inset:0;
+  background:rgba(18,12,34,.6);
+  backdrop-filter:blur(4px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:500;
+}
+.fu-modal-mask.fu-show{display:flex;}
+.fu-modal{
+  background:#fff;
+  border-radius:20px;
+  max-width:480px;
+  width:100%;
+  padding:28px;
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.7);
+  max-height:86vh;
+  overflow:auto;
+}
+.fu-modal h3{font-size:20px;margin-bottom:6px;}
+.fu-modal .fu-modal-sub{font-size:13px;color:var(--fu-muted);margin-bottom:18px;}
+.fu-modal label{display:block;font-size:13px;font-weight:700;margin:13px 0 6px;color:#3b2f55;}
+.fu-modal input,.fu-modal textarea,.fu-modal select{
+  width:100%;
+  padding:10px 13px;
+  border:1.5px solid var(--fu-line);
+  border-radius:11px;
+  font-size:13.5px;
+  font-family:inherit;
+  outline:none;
+  color:var(--fu-ink);
+  background:#fbf9ff;
+}
+.fu-modal textarea{min-height:92px;resize:vertical;}
+.fu-modal input:focus,.fu-modal textarea:focus,.fu-modal select:focus{border-color:var(--fu-lilac);}
+.fu-modal-actions{display:flex;gap:10px;margin-top:20px;}
+.fu-modal-actions .fu-btn{flex:1;}
+
+.fu-share-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+.fu-share-list button{
+  padding:9px 16px;border-radius:999px;
+  background:#f6f2ff;font-size:13px;font-weight:700;color:#4c3c8c;
+  transition:.2s;
+}
+.fu-share-list button:hover{background:var(--fu-lilac-soft);}
+
+/* ===== 响应式 ===== */
+@media(max-width:960px){
+  .fu-hero-grid{grid-template-columns:1fr;gap:34px;}
+  .fu-hero-float{right:10px;top:-14px;}
+  .fu-about-grid{grid-template-columns:1fr;gap:26px;}
+  .fu-aside-card{position:static;}
+  .fu-focus-grid{grid-template-columns:1fr;}
+  .fu-video-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .fu-news-coop{grid-template-columns:1fr;}
+  .fu-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:780px){
+  .fu-nav{display:none;}
+  .fu-burger{display:grid;place-items:center;}
+  .fu-search input{width:150px;}
+  .fu-search input:focus{width:168px;}
+  .fu-header-inner{padding:10px 16px;gap:12px;}
+  .fu-header-tools .fu-btn-primary{display:none;}
+  .fu-section{padding:48px 0;}
+  .fu-topics{grid-template-columns:1fr;}
+  .fu-creator-grid{grid-template-columns:1fr;}
+  .fu-review-grid{grid-template-columns:1fr;}
+  .fu-video-grid{grid-template-columns:1fr;}
+  .fu-cta{padding:32px 24px;}
+  .fu-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+  .fu-stat b{font-size:20px;}
+  .fu-announce{font-size:12px;padding:8px 14px;}
+}
+@media(max-width:520px){
+  .fu-footer-grid{grid-template-columns:1fr;}
+  .fu-search{display:none;}
+  .fu-coop{grid-template-columns:1fr;}
+  .fu-focus-item{grid-template-columns:84px minmax(0,1fr);}
+  .fu-focus-item img{width:84px;height:62px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="fu-sticky-wrap">
+  <div class="fu-announce">
+    <span class="fu-announce-badge">官方公告</span>
+    <span>11月新番专题《雾港来信》全6集高清正版已上线，同步开放创作者投稿通道；</span>
+    <a href="#fu-news">查看更新日志 →</a>
+  </div>
+
+  <header class="fu-header">
+    <div class="fu-header-inner">
+      <a href="#fu-hero" class="fu-brand">
+        <span class="fu-brand-mark">腐</span>
+        <span class="fu-brand-text"><b>腐剧tv入口</b><span>FUDJU TV · 官网</span></span>
+      </a>
+      <nav class="fu-nav" aria-label="主导航">
+        <a href="#fu-about">品牌解析</a>
+        <a href="#fu-focus">焦点内容</a>
+        <a href="#fu-videos">剧集</a>
+        <a href="#fu-topics">专题企划</a>
+        <a href="#fu-creators">创作者</a>
+        <a href="#fu-reviews">口碑</a>
+        <a href="#fu-news">企业动态</a>
+        <a href="#fu-faq">帮助</a>
+      </nav>
+      <div class="fu-header-tools">
+        <div class="fu-search">
+          <span class="fu-search-ico">🔍</span>
+          <input type="text" id="fuSearchInput" placeholder="搜索剧集 / 创作者" autocomplete="off" aria-label="站内搜索">
+          <div class="fu-search-tip" id="fuSearchTip"></div>
+        </div>
+        <button class="fu-btn fu-btn-primary" id="fuSubmitBtnTop">我要投稿</button>
+        <button class="fu-burger" id="fuBurger" aria-label="展开菜单">☰</button>
+      </div>
+    </div>
+    <nav class="fu-mobile-nav" id="fuMobileNav" aria-label="移动端导航">
+      <a href="#fu-about">品牌解析</a>
+      <a href="#fu-focus">焦点内容</a>
+      <a href="#fu-videos">剧集</a>
+      <a href="#fu-topics">专题企划</a>
+      <a href="#fu-creators">创作者</a>
+      <a href="#fu-reviews">口碑</a>
+      <a href="#fu-news">企业动态</a>
+      <a href="#fu-faq">帮助</a>
+    </nav>
+  </header>
+</div>
+
+<!-- S2 首屏 -->
+<section class="fu-hero" id="fu-hero">
+  <div class="fu-container">
+    <div class="fu-hero-grid">
+      <div>
+        <span class="fu-hero-official">★ 官方 · 品牌官网</span>
+        <h1>腐剧tv入口</h1>
+        <p class="fu-hero-lead">高清正版耽美影视内容平台 · 创作者与企业共建官方内容生态</p>
+        <p class="fu-hero-desc">
+          腐剧tv入口官方网站是一家专注品质短剧的垂直影视品牌，深耕耽美与都市情感题材内容领域，持续为观众提供高清、正版、原创的精品剧集与幕后故事。
+        </p>
+        <div class="fu-hero-actions">
+          <a href="#fu-videos" class="fu-btn fu-btn-primary">立即观看高清剧集</a>
+          <a href="#fu-topics" class="fu-btn fu-btn-ghost" style="color:#1a1130">浏览专题企划</a>
+          <button class="fu-btn fu-btn-ghost" style="color:#1a1130" id="fuShareBtnHero">分享官网</button>
+        </div>
+        <div class="fu-stats">
+          <div class="fu-stat"><b>1,280+</b><span>正版剧集储备</span></div>
+          <div class="fu-stat"><b>36.7万</b><span>注册创作者</span></div>
+          <div class="fu-stat"><b>98.2%</b><span>平台用户好评率</span></div>
+        </div>
+      </div>
+      <div class="fu-hero-visual">
+        <div class="fu-hero-float"><b>+12</b> 今日新上线</div>
+        <div class="fu-hero-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a1a52'/%3E%3Cstop offset='0.55' stop-color='%23633a7a'/%3E%3Cstop offset='1' stop-color='%23c05c9a'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ffe2a8' stop-opacity='0.9'/%3E%3Cstop offset='1' stop-color='%23e879b8' stop-opacity='0.25'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g1)'/%3E%3Ccircle cx='640' cy='120' r='150' fill='url(%23g2)' opacity='0.7'/%3E%3Ccircle cx='150' cy='430' r='190' fill='%239b8cff' opacity='0.22'/%3E%3Cpath d='M0 360 Q200 290 400 350 T800 320 V500 H0 Z' fill='%231a1130' opacity='0.65'/%3E%3Crect x='330' y='180' width='140' height='180' rx='12' fill='%23ffffff' opacity='0.14'/%3E%3Crect x='350' y='205' width='100' height='12' rx='6' fill='%23ffd166' opacity='0.85'/%3E%3Crect x='350' y='232' width='72' height='9' rx='4' fill='%23f7cfe6' opacity='0.6'/%3E%3Crect x='350' y='252' width='88' height='9' rx='4' fill='%23f7cfe6' opacity='0.4'/%3E%3Ccircle cx='400' cy='320' r='26' fill='%23e879b8'/%3E%3Cpath d='M392 308 L414 320 L392 332 Z' fill='%23ffffff'/%3E%3Cpath d='M90 100 Q130 60 170 100 T250 100' stroke='%23ffd166' stroke-width='3' fill='none' opacity='0.6' stroke-linecap='round'/%3E%3Ccircle cx='700' cy='400' r='8' fill='%2379e0c9'/%3E%3Ccircle cx='730' cy='360' r='5' fill='%23ffd166'/%3E%3C/svg%3E" alt="腐剧tv入口官网首屏主视觉：夜色剧集海报与播放界面组合构图" width="800" height="500">
+          <div class="fu-hero-play">
+            <span class="fu-hero-play-ico">▶</span>
+            <div><b>本周官方推荐 · 雾港来信</b><span>全6集高清正版 · 4K修复</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 品牌解析 -->
+<section class="fu-section" id="fu-about">
+  <div class="fu-container">
+    <div class="fu-section-head">
+      <div>
+        <span class="fu-eyebrow">Brand Insight</span>
+        <h2>腐剧tv入口品牌深度解析</h2>
+        <p>从内容定位到社区生态，读懂这个垂直影视品牌的持续运营逻辑。</p>
+      </div>
+    </div>
+    <div class="fu-about-grid">
+      <div class="fu-prose">
+        <p>作为国内较早专注于耽美与都市情感题材的垂直视频品牌，腐剧tv入口官方网站自创立以来，始终坚持“正版、高清、原创”的内容底线。平台以短剧集、微电影、幕后纪录与访谈为主要内容形态，围绕“真实、温暖、陪伴”的品牌理念，构建起一个兼具观赏性与参与感的内容社区。我们相信，好的影像不只提供娱乐，更能在日常里留下可被反复回味的情绪价值。</p>
+
+        <h3>一、腐剧tv入口的内容定位：垂直领域的品质坚持</h3>
+        <p>在泛娱乐内容极度充裕的当下，腐剧tv入口选择了一条更窄也更深的路径：不追求大而全的片库规模，而是把有限资源投入到精品剧集的孵化与打磨中。平台每年自主策划的专题企划不少于二十个，从都市合租、校园成长到职场并肩，每一个题材都由内容策划、编剧与创作者三方共同评估，确保故事有细节、人物有弧光。腐剧tv入口官网对每一部上线作品执行三审机制——剧本初审、成片复审与上线前终审，尽可能把叙事节奏、情感表达与价值观表达都调整到合适的状态。正因如此，腐剧tv入口在用户群体中逐渐积累了“选片靠谱”的口碑。</p>
+        <p>在清晰度与观看体验层面，腐剧tv入口官方网站全面支持高清与4K修复画质，并在播放器中内置字幕字号、倍速、画面比例等基础设置，让观众可以根据自己的习惯调整。对移动端用户，我们重新设计了竖屏播放与剧集连播逻辑，减少重复操作；对桌面端用户，则保留了更丰富的选集与分集简介信息。这些看似琐碎的细节，恰恰是腐剧tv入口作为企业级平台对用户体验的长期承诺。</p>
+
+        <h3>二、腐剧tv入口的创作者生态：从观众到共创者</h3>
+        <p>腐剧tv入口并不把自己定位成单纯的内容分发渠道，而更愿意做一个内容生态的组织者。平台设有创作者成长计划，为新人提供选题指导、剧本医生、拍摄设备租赁补贴与剪辑工作坊等支持。腐剧tv入口官网每年举办两季创作挑战赛，主题覆盖“日常记录”“创作幕后”“人物访谈”等方向，优胜作品可获得官方推荐位与拍摄基金，并进入年度精品内容池。对于已经形成个人风格的创作者，平台会协助其建立专属主页，沉淀作品集与粉丝社群，让创作不止于单条视频的传播。</p>
+        <p>截至目前，腐剧tv入口已聚集超过三十六万名注册创作者，其中签约创作者与长期合作团队构成了内容供应的中坚力量。平台通过分成机制、打赏功能与商业合作撮合，帮助创作者在坚持原创表达的同时获得可持续的收益。我们始终认为，只有创作者被善待，内容生态才能真正繁荣。这也是腐剧tv入口在行业观察者眼中区别于一般视频站的显著特征。</p>
+
+        <h3>三、腐剧tv入口的社区氛围：真实、温暖、有边界</h3>
+        <p>社区是腐剧tv入口的另一条生命线。平台在评论区之外，还设置了剧集讨论区、幕后花絮区与同好交流板块，用户可以在追剧之后继续聊角色动机、拍摄手法与配乐选择。为避免情绪化争吵，腐剧tv入口官网制定了明确的社区公约，对剧透标注、尊重创作者、理性表达等方面作出规定，并通过人工审核与用户举报双通道维持讨论秩序。我们希望社区既保持活力，也保有分寸感。</p>
+        <p>此外，腐剧tv入口持续运营“观众评审团”项目，邀请真实用户参与新剧试看与打分，评分结果会与专业评审共同构成作品的口碑参考。这一机制让普通观众的声音被认真对待，也让平台的内容决策更贴近用户需求。“用户至上”不是一句口号，而是被拆解成一条条可执行的产品流程。腐剧tv入口相信，长期主义的内容品牌，最终比拼的是对用户与创作者的诚意。</p>
+
+        <h3>四、腐剧tv入口的品牌责任与未来方向</h3>
+        <p>作为一家持续运营的视频企业，腐剧tv入口在内容合规、版权保护与青少年保护方面投入了长期资源。平台与多家版权方建立正版授权合作，坚决抵制盗版传播；在用户端，通过分级提示、观看时长提醒与家长控制功能，尽可能降低不适宜内容对未成年人的影响。同时，腐剧tv入口官网积极参与行业交流，与高校影视社团、独立影像团队保持合作，为年轻创作者提供展示舞台，承担力所能及的社会责任。</p>
+        <blockquote>面向未来，腐剧tv入口将持续深耕耽美与都市情感这一垂直领域，在保证内容品质的前提下探索更多元的表现形式，包括互动短剧、竖屏微电影与创作者纪录片。我们希望腐剧tv入口不只是一个观看入口，更是一个可以被信任、被参与、被记住的品牌。</blockquote>
+      </div>
+      <aside class="fu-aside-card">
+        <h3>品牌关键词一览</h3>
+        <ul>
+          <li><span>官网</span>官方发布渠道，信息统一出口</li>
+          <li><span>正版</span>版权合作与正版授权片库</li>
+          <li><span>高清</span>支持高清与4K修复画质</li>
+          <li><span>原创</span>年度专题企划与自制剧集</li>
+          <li><span>社区</span>讨论区、同好板块与观众评审团</li>
+          <li><span>匠心</span>三审机制打磨精品内容</li>
+          <li><span>陪伴</span>长期运营的内容陪伴关系</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- S3 焦点内容 -->
+<section class="fu-section" id="fu-focus" style="background:linear-gradient(180deg,#f7f4fb,#efe9fa);">
+  <div class="fu-container">
+    <div class="fu-section-head">
+      <div>
+        <span class="fu-eyebrow">Focus</span>
+        <h2>腐剧tv入口焦点推荐</h2>
+        <p>编辑团队本周挑选的官方重点内容，兼顾口碑与讨论热度。</p>
+      </div>
+      <button class="fu-btn fu-btn-ghost" id="fuFocusMore">查看更多推荐</button>
+    </div>
+    <div class="fu-focus-grid">
+      <article class="fu-focus-main">
+        <div class="fu-focus-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231f2a4a'/%3E%3Cstop offset='1' stop-color='%235b3a7a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23f1)'/%3E%3Ccircle cx='520' cy='80' r='90' fill='%23ffd166' opacity='0.35'/%3E%3Crect x='60' y='220' width='240' height='6' rx='3' fill='%23e879b8' opacity='0.8'/%3E%3Crect x='60' y='240' width='160' height='6' rx='3' fill='%239b8cff' opacity='0.7'/%3E%3Cpath d='M340 360 V150 Q400 120 460 150 V360' fill='%23ffffff' opacity='0.12'/%3E%3Crect x='386' y='180' width='28' height='42' rx='4' fill='%23ffd166' opacity='0.8'/%3E%3Crect x='340' y='70' width='120' height='8' rx='4' fill='%23ffffff' opacity='0.5'/%3E%3C/svg%3E" alt="雾港来信剧集主视觉：夜色港口与暖色灯光构图" width="640" height="360">
+          <span class="fu-focus-tag">官方重点</span>
+        </div>
+        <div class="fu-focus-body">
+          <h3>《雾港来信》全6集：一封跨越十年的信，与两个不敢开口的人</h3>
+          <p>腐剧tv入口年度自制短剧，讲述港口小城里两位旧同学的久别重逢。剧集以细腻的生活流叙事呈现成年人关系中的进退，配乐与光影处理是今年平台自制内容中的高水准呈现，上线首周即进入热度榜前三。</p>
+          <div class="fu-meta"><span>导演 <b>沈砚川</b></span><span>主演 <b>林知遥 / 顾屿</b></span><span>播放 <b>182.4万</b></span><span>评分 <b>9.4</b></span></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button class="fu-btn fu-btn-primary" data-fu-toast="已为你加入待看清单">加入待看</button>
+            <button class="fu-btn fu-btn-ghost" data-fu-share>分享剧集</button>
+          </div>
+        </div>
+      </article>
+      <div class="fu-focus-list">
+        <article class="fu-focus-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 150'%3E%3Crect width='220' height='150' fill='%23312a5e'/%3E%3Ccircle cx='170' cy='40' r='40' fill='%23f7cfe6' opacity='0.5'/%3E%3Crect x='20' y='100' width='110' height='7' rx='3' fill='%2379e0c9'/%3E%3Crect x='20' y='118' width='70' height='7' rx='3' fill='%239b8cff' opacity='0.7'/%3E%3C/svg%3E" alt="合租第七年的剧集封面：室内暖光场景" width="220" height="150">
+          <div>
+            <h4>《合租第七年》幕后纪录：一场厨房戏拍了十九遍</h4>
+            <p>创作幕后 · 导演与摄影指导复盘长镜头调度细节。</p>
+            <div class="fu-meta"><span>播放 64.2万</span><span>点赞 3.1万</span></div>
+          </div>
+        </article>
+        <article class="fu-focus-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 150'%3E%3Crect width='220' height='150' fill='%23203a4a'/%3E%3Cpath d='M0 120 Q60 80 120 110 T220 100 V150 H0 Z' fill='%2379e0c9' opacity='0.35'/%3E%3Ccircle cx='60' cy='50' r='22' fill='%23ffd166' opacity='0.7'/%3E%3Crect x='120' y='40' width='70' height='6' rx='3' fill='%23ffffff' opacity='0.4'/%3E%3C/svg%3E" alt="海边剧集的剧集封面：海岸线与夕阳色调" width="220" height="150">
+          <div>
+            <h4>《潮汐之间》取景地探访：一座被海浪声包围的小镇</h4>
+            <p>城市探索 · 跟着剧组镜头走进拍摄地。</p>
+            <div class="fu-meta"><span>播放 51.8万</span><span>点赞 2.4万</span></div>
+          </div>
+        </article>
+        <article class="fu-focus-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 150'%3E%3Crect width='220' height='150' fill='%235c2f4c'/%3E%3Crect x='30' y='30' width='160' height='90' rx='8' fill='%23ffffff' opacity='0.1'/%3E%3Ccircle cx='110' cy='75' r='24' fill='%23e879b8'/%3E%3Cpath d='M104 66 L120 75 L104 84 Z' fill='%23fff'/%3E%3C/svg%3E" alt="创作者访谈片段的画面：播放入口与人物剪影" width="220" height="150">
+          <div>
+            <h4>对话编剧林砚：为什么我们总在写“差一点就说出口”</h4>
+            <p>人物访谈 · 关于台词克制与情绪留白。</p>
+            <div class="fu-meta"><span>播放 39.6万</span><span>点赞 1.9万</span></div>
+          </div>
+        </article>
+        <article class="fu-focus-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 150'%3E%3Crect width='220' height='150' fill='%232b2340'/%3E%3Crect x='24' y='90' width='172' height='5' rx='2' fill='%239b8cff' opacity='0.6'/%3E%3Ccircle cx='80' cy='60' r='20' fill='%23ffd166' opacity='0.8'/%3E%3Ccircle cx='130' cy='60' r='20' fill='%23e879b8' opacity='0.8'/%3E%3C/svg%3E" alt="双男主剧集宣传图：两个圆形人物符号并列" width="220" height="150">
+          <div>
+            <h4>新品预告：《雨停之前》定档12月，官方首发物料</h4>
+            <p>官方发布 · 主创阵容与首支概念预告同步公开。</p>
+            <div class="fu-meta"><span>预告 28.3万</span><span>收藏 1.2万</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 视频流: 三列等高卡片 -->
+<section class="fu-section" id="fu-videos">
+  <div class="fu-container">
+    <div class="fu-section-head">
+      <div>
+        <span class="fu-eyebrow">Episodes</span>
+        <h2>腐剧tv入口精品剧集</h2>
+        <p>官方正版高清内容，覆盖短剧、幕后纪录与创作者访谈三种形态。</p>
+      </div>
+      <button class="fu-btn fu-btn-ghost" data-fu-toast="筛选面板即将开放，敬请期待">按标签筛选</button>
+    </div>
+    <div class="fu-video-grid" id="fuVideoGrid">
+
+      <article class="fu-video-card">
+        <div class="fu-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23332a63'/%3E%3Cstop offset='1' stop-color='%239b6ab8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='225' fill='url(%23v1)'/%3E%3Ccircle cx='320' cy='48' r='46' fill='%23ffd166' opacity='0.6'/%3E%3Crect x='30' y='150' width='150' height='8' rx='4' fill='%23fff' opacity='0.6'/%3E%3Crect x='30' y='170' width='96' height='8' rx='4' fill='%23e879b8' opacity='0.8'/%3E%3C/svg%3E" alt="雾港来信剧集缩略图：港口夜色与暖黄灯光" width="400" height="225">
+          <span class="fu-video-dur">06 集</span>
+        </div>
+        <div class="fu-video-body">
+          <div class="fu-tags"><span class="fu-tag fu-tag-pink">自制短剧</span><span class="fu-tag">情感</span></div>
+          <h3>雾港来信 · 全6集高清正版</h3>
+          <p>两个旧同学在港口小城重逢，用一封信解开十年的沉默，细腻克制的生活流叙事。</p>
+          <div class="fu-video-foot">
+            <div class="fu-author-chip"><span class="fu-avatar fu-avatar-a">沈</span>沈砚川</div>
+            <div class="fu-actions">
+              <button class="fu-icon-btn" data-fu-like aria-label="点赞">♥ <span>1824</span></button>
+              <button class="fu-icon-btn" data-fu-save aria-label="收藏">☆</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="fu-video-card">
+        <div class="fu-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%2324463e'/%3E%3Cpath d='M0 170 Q90 120 180 155 T400 140 V225 H0 Z' fill='%2379e0c9' opacity='0.4'/%3E%3Ccircle cx='80' cy='60' r='30' fill='%23ffd166' opacity='0.65'/%3E%3Crect x='220' y='70' width='130' height='7' rx='3' fill='%23fff' opacity='0.4'/%3E%3C/svg%3E" alt="潮汐之间剧集缩略图：海岸线与绿色海面" width="400" height="225">
+          <span class="fu-video-dur">04 集</span>
+        </div>
+        <div class="fu-video-body">
+          <div class="fu-tags"><span class="fu-tag fu-tag-mint">城市探索</span><span class="fu-tag">治愈</span></div>
+          <h3>潮汐之间 · 海边小镇的四个夏天</h3>
+          <p>剧组实地拍摄纪录与剧情双线并行，跟随镜头走进被海浪声包围的日常。</p>
+          <div class="fu-video-foot">
+            <div class="fu-author-chip"><span class="fu-avatar fu-avatar-c">周</span>周屿白</div>
+            <div class="fu-actions">
+              <button class="fu-icon-btn" data-fu-like aria-label="点赞">♥ <span>1376</span></button>
+              <button class="fu-icon-btn" data-fu-save aria-label="收藏">☆</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="fu-video-card">
+        <div class="fu-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23402a4a'/%3E%3Crect x='40' y='40' width='140' height='145' rx='10' fill='%23ffffff' opacity='0.1'/%3E%3Ccircle cx='110' cy='95' r='22' fill='%23e879b8'/%3E%3Crect x='210' y='60' width='150' height='8' rx='4' fill='%23f7cfe6' opacity='0.7'/%3E%3Crect x='210' y='86' width='110' height='8' rx='4' fill='%23f7cfe6' opacity='0.45'/%3E%3Crect x='210' y='112' width='130' height='8' rx='4' fill='%23f7cfe6' opacity='0.3'/%3E%3C/svg%3E" alt="合租第七年幕后纪录缩略图：室内布景与灯光示意" width="400" height="225">
+          <span class="fu-video-dur">18:24</span>
+        </div>
+        <div class="fu-video-body">
+          <div class="fu-tags"><span class="fu-tag">创作幕后</span><span class="fu-tag fu-tag-pink">访谈</span></div>
+          <h3>合租第七年 · 一场厨房戏拍了十九遍</h3>
+          <p>导演与摄影指导拆解长镜头调度、走位与自然光的取舍，还原拍摄现场的真实难度。</p>
+          <div class="fu-video-foot">
+            <div class="fu-author-chip"><span class="fu-avatar fu-avatar-b">梁</span>梁照</div>
+            <div class="fu-actions">
+              <button class="fu-icon-btn" data-fu-like aria-label="点赞">♥ <span>962</span></button>
+              <button class="fu-icon-btn" data-fu-save aria-label="收藏">☆</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="fu-video-card">
+        <div class="fu-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%232d3559'/%3E%3Crect x='60' y='60' width='280' height='105' rx='10' fill='%23ffffff' opacity='0.08'/%3E%3Ccircle cx='200' cy='112' r='26' fill='%239b8cff'/%3E%3Cpath d='M192 100 L212 112 L192 124 Z' fill='%23fff'/%3E%3Crect x='60' y='180' width='120' height='6' rx='3' fill='%23ffd166' opacity='0.7'/%3E%3C/svg%3E" alt="编剧访谈视频缩略图：播放界面与人物剪影" width="400" height="225">
+          <span class="fu-video-dur">24:10</span>
+        </div>
+        <div class="fu-video-body">
+          <div class="fu-tags"><span class="fu-tag fu-tag-pink">人物访谈</span><span class="fu-tag">编剧</span></div>
+          <h3>对话编剧林砚：写“差一点就说出口”的人</h3>
+          <p>关于台词克制、情绪留白与角色留白，一场关于创作方法论的深度长谈。</p>
+          <div class="fu-video-foot">
+            <div class="fu-author-chip"><span class="fu-avatar fu-avatar-d">林</span>林砚</div>
+            <div class="fu-actions">
+              <button class="fu-icon-btn" data-fu-like aria-label="点赞">♥ <span>1198</span></button>
+              <button class="fu-icon-btn" data-fu-save aria-label="收藏">☆</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="fu-video-card">
+        <div class="fu-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23502f3a'/%3E%3Crect x='0' y='150' width='400' height='75' fill='%23e879b8' opacity='0.35'/%3E%3Ccircle cx='110' cy='80' r='34' fill='%23ffd166' opacity='0.7'/%3E%3Ccircle cx='270' cy='90' r='26' fill='%23f7cfe6' opacity='0.6'/%3E%3Crect x='30' y='40' width='90' height='6' rx='3' fill='%23fff' opacity='0.45'/%3E%3C/svg%3E" alt="雨停之前预告片缩略图：雨幕与两个人物剪影" width="400" height="225">
+          <span class="fu-video-dur">预告</span>
+        </div>
+        <div class="fu-video-body">
+          <div class="fu-tags"><span class="fu-tag">官方发布</span><span class="fu-tag fu-tag-mint">新品</span></div>
+          <h3>雨停之前 · 首支概念预告与主创阵容</h3>
+          <p>年度重点企划正式定档，官方首发物料曝光，雨声与沉默构成全片情绪底色。</p>
+          <div class="fu-video-foot">
+            <div class="fu-author-chip"><span class="fu-avatar fu-avatar-e">官</span>官方发布</div>
+            <div class="fu-actions">
+              <button class="fu-icon-btn" data-fu-like aria-label="点赞">♥ <span>2043</span></button>
+              <button class="fu-icon-btn" data-fu-save aria-label="收藏">☆</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="fu-video-card">
+        <div class="fu-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23223f45'/%3E%3Cpath d='M0 140 Q80 100 160 130 T400 120 V225 H0 Z' fill='%2379e0c9' opacity='0.28'/%3E%3Crect x='250' y='40' width='110' height='8' rx='4' fill='%23ffd166' opacity='0.8'/%3E%3Crect x='250' y='62' width='80' height='8' rx='4' fill='%23fff' opacity='0.4'/%3E%3Ccircle cx='90' cy='70' r='26' fill='%239b8cff' opacity='0.7'/%3E%3C/svg%3E" alt="旅拍攻略视频缩略图：山影与湖面倒影" width="400" height="225">
+          <span class="fu-video-dur">12:36</span>
+        </div>
+        <div class="fu-video-body">
+          <div class="fu-tags"><span class="fu-tag fu-tag-mint">旅行见闻</span><span class="fu-tag">攻略</span></div>
+          <h3>跟着剧组去旅行：三天两夜拍摄地攻略</h3>
+          <p>交通、住宿、拍摄光线时段全整理，给想去同款取景地的观众一份实用清单。</p>
+          <div class="fu-video-foot">
+            <div class="fu-author-chip"><span class="fu-avatar fu-avatar-f">苏</span>苏未</div>
+            <div class="fu-actions">
+              <button class="fu-icon-btn" data-fu-like aria-label="点赞">♥ <span>748</span></button>
+              <button class="fu-icon-btn" data-fu-save aria-label="收藏">☆</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- S4 专题企划 -->
+<section class="fu-section" id="fu-topics" style="background:linear-gradient(180deg,#efe9fa,#f7f4fb);">
+  <div class="fu-container">
+    <div class="fu-section-head">
+      <div>
+        <span class="fu-eyebrow">Series</span>
+        <h2>腐剧tv入口专题企划</h2>
+        <p>以主题串联内容，让观看变成一次完整的情绪旅程。</p>
+      </div>
+    </div>
+    <div class="fu-topics">
+      <article class="fu-topic">
+        <div class="fu-topic-head"><h3>专题 · 重逢的三十二种方式</h3><span class="fu-status">更新中 · 4/6</span></div>
+        <p>围绕“久别重逢”这一母题，收录六部短剧与配套幕后访谈，探讨时间如何改变两个人的距离。</p>
+        <ul class="fu-topic-list">
+          <li>《雾港来信》第3集：那封信一直没寄出</li>
+          <li>幕后纪录：重逢戏的调度与留白</li>
+          <li>编剧圆桌：如何写好一个不煽情的重逢</li>
+        </ul>
+      </article>
+      <article class="fu-topic">
+        <div class="fu-topic-head"><h3>专题 · 城市里的日常影像</h3><span class="fu-status">已完结 · 5/5</span></div>
+        <p>把镜头交给真实的街巷与通勤路线，记录普通城市生活里的细小温度。</p>
+        <ul class="fu-topic-list">
+          <li>清晨六点的早餐铺与收摊的糖水车</li>
+          <li>末班地铁上的三种睡姿</li>
+          <li>一个人的搬家日：纸箱与窗外天色</li>
+        </ul>
+      </article>
+      <article class="fu-topic">
+        <div class="fu-topic-head"><h3>专题 · 创作者的第一部短剧</h3><span class="fu-status">更新中 · 3/4</span></div>
+        <p>四位新人创作者讲述从提笔到杀青的全过程，含预算表、分镜与踩坑记录。</p>
+        <ul class="fu-topic-list">
+          <li>两千元预算怎样拍出电影感</li>
+          <li>选角现场：如何判断对手戏的化学反应</li>
+          <li>粗剪之后必须做的三件事</li>
+        </ul>
+      </article>
+      <article class="fu-topic">
+        <div class="fu-topic-head"><h3>专题 · 平权与表达：影视中的多元叙事</h3><span class="fu-status">即将上线</span></div>
+        <p>邀请创作者、编剧与观众共同讨论影像中的多元表达与边界感。</p>
+        <ul class="fu-topic-list">
+          <li>圆桌预告：我们需要怎样的情感叙事</li>
+          <li>观众来信计划正式开启</li>
+          <li>年度多元影像片单筹备中</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S5 创作者矩阵: 双列简介 -->
+<section class="fu-section" id="fu-creators">
+  <div class="fu-container">
+    <div class="fu-section-head">
+      <div>
+        <span class="fu-eyebrow">Creators</span>
+        <h2>腐剧tv入口创作者矩阵</h2>
+        <p>他们用镜头讲故事，也构成了这个平台真实的温度。</p>
+      </div>
+      <button class="fu-btn fu-btn-ghost" id="fuCreatorJoin">申请成为创作者</button>
+    </div>
+    <div class="fu-creator-grid">
+
+      <article class="fu-creator">
+        <div class="fu-creator-avatar fu-avatar-a">沈</div>
+        <div>
+          <h3>沈砚川</h3>
+          <div class="fu-field">擅长领域 · 短剧导演 / 情感叙事</div>
+          <p>入行七年，从广告片转做剧情短片，习惯用长镜头和自然光讲故事。作品节奏克制，擅长把情绪藏在日常细节里。曾获平台年度最佳导演，代表作为《雾港来信》。</p>
+          <div class="fu-creator-stats"><span>作品 <b>43</b></span><span>粉丝 <b>12.6万</b></span></div>
+        </div>
+      </article>
+
+      <article class="fu-creator">
+        <div class="fu-creator-avatar fu-avatar-c">周</div>
+        <div>
+          <h3>周屿白</h3>
+          <div class="fu-field">擅长领域 · 城市纪录 / 旅行影像</div>
+          <p>自由摄影师出身，主张“先走进去再开机”。拍摄过十余座沿海小镇，作品多关注地理空间与人的关系。在平台持续更新《潮汐之间》系列，偏爱清晨与傍晚的光线。</p>
+          <div class="fu-creator-stats"><span>作品 <b>68</b></span><span>粉丝 <b>9.8万</b></span></div>
+        </div>
+      </article>
+
+      <article class="fu-creator">
+        <div class="fu-creator-avatar fu-avatar-b">梁</div>
+        <div>
+          <h3>梁照</h3>
+          <div class="fu-field">擅长领域 · 摄影指导 / 幕后解析</div>
+          <p>技术流创作者，喜欢把拍摄现场拆成可复用的方法。擅长棚拍与自然光混合，长期更新幕后花絮与器材心得，内容实用、门槛友好，是许多新人创作者的学习入口。</p>
+          <div class="fu-creator-stats"><span>作品 <b>52</b></span><span>粉丝 <b>7.4万</b></span></div>
+        </div>
+      </article>
+
+      <article class="fu-creator">
+        <div class="fu-creator-avatar fu-avatar-d">林</div>
+        <div>
+          <h3>林砚</h3>
+          <div class="fu-field">擅长领域 · 编剧 / 人物访谈</div>
+          <p>文字工作者，长期为平台提供剧本与访谈内容。相信对话是最快的理解方式，访谈风格不设防、不客套，擅长把创作方法论讲得具体可执行，深受同行认可。</p>
+          <div class="fu-creator-stats"><span>作品 <b>37</b></span><span>粉丝 <b>6.1万</b></span></div>
+        </div>
+      </article>
+
+      <article class="fu-creator">
+        <div class="fu-creator-avatar fu-avatar-f">苏</div>
+        <div>
+          <h3>苏未</h3>
+          <div class="fu-field">擅长领域 · 旅拍攻略 / 生活方式</div>
+          <p>把剧集取景地做成可执行的旅行攻略，从交通班次到最佳拍摄时段都写得清楚。风格轻快，镜头干净，善于在有限时间内捕捉一个地方最有辨识度的画面。</p>
+          <div class="fu-creator-stats"><span>作品 <b>74</b></span><span>粉丝 <b>11.2万</b></span></div>
+        </div>
+      </article>
+
+      <article class="fu-creator">
+        <div class="fu-creator-avatar fu-avatar-e">官</div>
+        <div>
+          <h3>官方发布号</h3>
+          <div class="fu-field">擅长领域 · 官方公告 / 品牌内容</div>
+          <p>腐剧tv入口官方网站的内容发布窗口，负责新剧定档、专题上线、活动报名与更新日志的同步。所有官方信息以该账号为准，确保用户获取到准确、及时的一手内容。</p>
+          <div class="fu-creator-stats"><span>作品 <b>210</b></span><span>粉丝 <b>28.9万</b></span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- S6 用户评价: 双列短评 -->
+<section class="fu-section" id="fu-reviews" style="background:linear-gradient(180deg,#f7f4fb,#f1ecfa);">
+  <div class="fu-container">
+    <div class="fu-section-head">
+      <div>
+        <span class="fu-eyebrow">Voices</span>
+        <h2>腐剧tv入口用户口碑</h2>
+        <p>来自观众的短评，关于剧情、画质与社区氛围的真实反馈。</p>
+      </div>
+    </div>
+    <div class="fu-review-grid">
+
+      <div class="fu-review">
+        <div class="fu-review-head"><span class="fu-avatar fu-avatar-a" style="width:30px;height:30px;font-size:13px">阿</span><b>阿柚不加冰</b><span class="fu-stars">★★★★★</span></div>
+        <p>《雾港来信》最后一集我反复看了三遍。台词很少，但每一句都落在该落的地方，这种克制的处理太难得。</p>
+      </div>
+
+      <div class="fu-review">
+        <div class="fu-review-head"><span class="fu-avatar fu-avatar-c" style="width:30px;height:30px;font-size:13px">南</span><b>南方有乔木</b><span class="fu-stars">★★★★★</span></div>
+        <p>画质是真的好，4K修复版能看清背景里的道具细节。用投屏看很过瘾，希望以后多出一些导演评论音轨。</p>
+      </div>
+
+      <div class="fu-review">
+        <div class="fu-review-head"><span class="fu-avatar fu-avatar-b" style="width:30px;height:30px;font-size:13px">一</span><b>一只小行星</b><span class="fu-stars">★★★★☆</span></div>
+        <p>社区讨论区氛围不错，大家都在聊角色动机而不是互相攻击。唯一的小意见是深夜档更新提醒有点频繁。</p>
+      </div>
+
+      <div class="fu-review">
+        <div class="fu-review-head"><span class="fu-avatar fu-avatar-d" style="width:30px;height:30px;font-size:13px">陈</span><b>陈拾贰</b><span class="fu-stars">★★★★★</span></div>
+        <p>作为新人创作者，第一次参加平台创作挑战赛就拿到了推荐位。剧本医生给的修改意见非常具体，不是敷衍。</p>
+      </div>
+
+      <div class="fu-review">
+        <div class="fu-review-head"><span class="fu-avatar fu-avatar-e" style="width:30px;height:30px;font-size:13px">黄</span><b>黄昏放映厅</b><span class="fu-stars">★★★★☆</span></div>
+        <p>专题企划做得很用心，“重逢的三十二种方式”把一个母题拆得很细，看完会想回头补前面漏掉的片子。</p>
+      </div>
+
+      <div class="fu-review">
+        <div class="fu-review-head"><span class="fu-avatar fu-avatar-f" style="width:30px;height:30px;font-size:13px">小</span><b>小满不是节气</b><span class="fu-stars">★★★★★</span></div>
+        <p>最喜欢幕后纪录这个栏目。以前只看成片，现在会关注摄影和灯光，感觉自己审美都提高了。</p>
+      </div>
+
+      <div class="fu-review">
+        <div class="fu-review-head"><span class="fu-avatar fu-avatar-a" style="width:30px;height:30px;font-size:13px">夜</span><b>夜航船</b><span class="fu-stars">★★★★☆</span></div>
+        <p>移动端竖屏连播体验比之前好了很多，通勤路上看一集刚刚好。希望缓存列表能支持自定义排序。</p>
+      </div>
+
+      <div class="fu-review">
+        <div class="fu-review-head"><span class="fu-avatar fu-avatar-c" style="width:30px;height:30px;font-size:13px">林</span><b>林间有雾</b><span class="fu-stars">★★★★★</span></div>
+        <p>从观众评审团的一次试看活动开始关注这个平台，能感受到他们对用户意见是真的会采纳，不是走流程。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- S7 企业动态 & 合作 -->
+<section class="fu-section" id="fu-news">
+  <div class="fu-container">
+    <div class="fu-section-head">
+      <div>
+        <span class="fu-eyebrow">Newsroom</span>
+        <h2>腐剧tv入口企业动态与合作伙伴</h2>
+        <p>官方发布、内容更新与品牌合作信息，都在这里同步。</p>
+      </div>
+    </div>
+    <div class="fu-news-coop">
+      <ul class="fu-news">
+        <li><time>11月20日</time><div><b>《雾港来信》全6集高清正版上线</b><span>同步开放导演评论音轨与幕后花絮，会员可提前解锁终章。</span></div></li>
+        <li><time>11月15日</time><div><b>年度创作挑战赛·冬季赛报名开启</b><span>主题“重逢”，投稿截止12月20日，优胜作品获拍摄基金与官方推荐。</span></div></li>
+        <li><time>11月08日</time><div><b>平台播放器升级：支持4K修复与字幕样式自定义</b><span>移动端同步优化竖屏连播与后台播放稳定性。</span></div></li>
+        <li><time>10月28日</time><div><b>观众评审团第三期招募完成</b><span>新增三百位真实用户参与新剧试看与口碑评分。</span></div></li>
+      </ul>
+      <div class="fu-coop">
+        <div class="fu-coop-item">光影制片社<small>内容共创伙伴</small></div>
+        <div class="fu-coop-item">南岸影像节<small>展映合作</small></div>
+        <div class="fu-coop-item">青禾字幕组<small>正版字幕支持</small></div>
+        <div class="fu-coop-item">海岸线音乐工作室<small>原创配乐合作</small></div>
+        <div class="fu-coop-item">城市青年影院<small>线下放映伙伴</small></div>
+        <div class="fu-coop-item">拾光摄影器材<small>设备支持伙伴</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S7 FAQ -->
+<section class="fu-section" id="fu-faq" style="background:linear-gradient(180deg,#f1ecfa,#f7f4fb);">
+  <div class="fu-container">
+    <div class="fu-section-head" style="justify-content:center;text-align:center;flex-direction:column;align-items:center;">
+      <span class="fu-eyebrow">Help Center</span>
+      <h2>腐剧tv入口常见问题</h2>
+      <p>关于观看、投稿与版权的常见疑问，点击标题展开查看。</p>
+    </div>
+    <div class="fu-faq">
+      <details open>
+        <summary>腐剧tv入口的剧集是正版授权吗？</summary>
+        <p>是的。平台内容以自制剧集、正版授权合作与创作者原创作品为主，所有上线内容均经过版权核验。腐剧tv入口官方网站不接受未经授权的搬运内容，如发现侵权可通过反馈入口举报。</p>
+      </details>
+      <details>
+        <summary>如何成为腐剧tv入口的创作者并投稿？</summary>
+        <p>点击页面上的“我要投稿”按钮填写基本信息与作品链接即可。平台会在五个工作日内完成初审，通过后会安排内容运营同学对接选题与发布节奏，新人也可申请设备补贴与剪辑指导。</p>
+      </details>
+      <details>
+        <summary>支持哪些清晰度？需要会员才能看4K吗？</summary>
+        <p>平台提供标清、高清与4K修复三档清晰度，部分自制剧集的4K版本与导演评论音轨为会员专享。具体以每部剧集详情页的标识为准，普通用户也可以观看高清版本。</p>
+      </details>
+      <details>
+        <summary>观众评审团怎么加入？</summary>
+        <p>观众评审团每季度招募一次，会在企业动态中发布报名入口。参与者需完成新剧试看并提交评分与简短反馈，入选用户可优先观看未上线内容，并获得平台纪念周边。</p>
+      </details>
+      <details>
+        <summary>社区评论有哪些规范？</summary>
+        <p>腐剧tv入口倡导理性、友善的讨论氛围。剧透内容需要标注，禁止人身攻击与未经授权的资源传播。违反公约的账号会被提醒或限制发言，多次违规将暂停社区功能。</p>
+      </details>
+      <details>
+        <summary>可以在哪些设备上观看？</summary>
+        <p>支持桌面浏览器、移动端网页与平板设备观看，播放器会记忆上次进度。部分型号电视可通过投屏功能观看，建议使用稳定网络以获得更流畅的高清播放体验。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 投稿 CTA -->
+<section class="fu-section" style="padding-top:0;">
+  <div class="fu-container">
+    <div class="fu-cta">
+      <div>
+        <h2>把你的故事，交给腐剧tv入口</h2>
+        <p>无论是一部短片、一段幕后纪录，还是一封写给镜头的信，我们都愿意认真看完。官方投稿通道长期开放，优质作品将获得推荐位与拍摄支持。</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <button class="fu-btn fu-btn-primary" id="fuSubmitBtn">立即投稿</button>
+        <button class="fu-btn fu-btn-ghost" style="background:transparent;border-color:rgba(255,255,255,.35);color:#fff" id="fuCopyBtn">复制官网链接</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S8 页脚 -->
+<footer class="fu-footer">
+  <div class="fu-container">
+    <div class="fu-footer-grid">
+      <div class="fu-footer-brand">
+        <div class="fu-brand">
+          <span class="fu-brand-mark">腐</span>
+          <span class="fu-brand-text"><b>腐剧tv入口</b><span>FUDJU TV · 官网</span></span>
+        </div>
+        <p>腐剧tv入口官方网站，专注高清正版耽美与都市情感影视内容的垂直视频平台，持续为创作者与观众搭建值得信赖的内容生态。</p>
+      </div>
+      <div>
+        <h4>浏览内容</h4>
+        <ul>
+          <li><a href="#fu-videos">精品剧集</a></li>
+          <li><a href="#fu-topics">专题企划</a></li>
+          <li><a href="#fu-focus">焦点推荐</a></li>
+          <li><a href="#fu-news">企业动态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>创作者服务</h4>
+        <ul>
+          <li><a href="#fu-creators">创作者矩阵</a></li>
+          <li><a href="#fu-faq">投稿指南</a></li>
+          <li><a href="#fu-reviews">用户口碑</a></li>
+          <li><a href="#fu-about">品牌解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#fu-about">品牌故事</a></li>
+          <li><a href="#fu-news">合作伙伴</a></li>
+          <li><a href="#fu-faq">帮助中心</a></li>
+          <li><a href="#fu-faq">版权说明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fu-footer-bottom">
+      <span>© 2026 腐剧tv入口官方网站 · 版权所有 · 持续运营中</span>
+      <span>品牌备案号：FUDJU-2026-1122 · 内容版权归原作者所有</span>
+    </div>
+  </div>
+</footer>
+
+<button class="fu-top" id="fuTopBtn" aria-label="回到顶部">↑</button>
+<div class="fu-toast" id="fuToast" role="status" aria-live="polite"></div>
+
+<div class="fu-modal-mask" id="fuModalMask">
+  <div class="fu-modal" id="fuModalBox" role="dialog" aria-modal="true"></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById("fuBurger");
+  var mobileNav = document.getElementById("fuMobileNav");
+  burger.addEventListener("click", function(){
+    mobileNav.classList.toggle("fu-open");
+    burger.textContent = mobileNav.classList.contains("fu-open") ? "✕" : "☰";
+  });
+  mobileNav.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      mobileNav.classList.remove("fu-open");
+      burger.textContent = "☰";
+    });
+  });
+
+  /* ---------- Toast ---------- */
+  var toast = document.getElementById("fuToast");
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add("fu-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("fu-show"); }, 2400);
+  }
+
+  /* ---------- 通用 toast 按钮 ---------- */
+  document.querySelectorAll("[data-fu-toast]").forEach(function(btn){
+    btn.addEventListener("click", function(){ showToast(btn.getAttribute("data-fu-toast")); });
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll("[data-fu-like]").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.stopPropagation();
+      var span = btn.querySelector("span");
+      var n = parseInt(span.textContent, 10) || 0;
+      if(btn.classList.contains("fu-liked")){
+        btn.classList.remove("fu-liked");
+        span.textContent = n - 1;
+        showToast("已取消点赞");
+      }else{
+        btn.classList.add("fu-liked");
+        span.textContent = n + 1;
+        showToast("点赞成功，感谢支持");
+      }
+    });
+  });
+  document.querySelectorAll("[data-fu-save]").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.stopPropagation();
+      if(btn.classList.contains("fu-saved")){
+        btn.classList.remove("fu-saved");
+        btn.textContent = "☆";
+        showToast("已取消收藏");
+      }else{
+        btn.classList.add("fu-saved");
+        btn.textContent = "★";
+        showToast("已加入收藏夹");
+      }
+    });
+  });
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById("fuSearchInput");
+  var searchTip = document.getElementById("fuSearchTip");
+  var searchData = [
+    "雾港来信 全6集高清正版",
+    "潮汐之间 海边小镇的四个夏天",
+    "合租第七年 幕后纪录",
+    "对话编剧林砚 人物访谈",
+    "重逢的三十二种方式 专题",
+    "跟剧组去旅行 拍摄地攻略",
+    "沈砚川 创作者主页",
+    "周屿白 城市纪录"
+  ];
+  function renderSearchTip(kw){
+    var q = kw.trim();
+    if(!q){
+      searchTip.classList.remove("fu-show");
+      searchTip.innerHTML = "";
+      return;
+    }
+    var hits = searchData.filter(function(item){
+      return item.toLowerCase().indexOf(q.toLowerCase()) > -1;
+    });
+    if(hits.length === 0){
+      searchTip.innerHTML = '<div class="fu-tip-empty">未找到“' + q.replace(/</g,"&lt;") + '”相关内容，试试其他关键词</div>';
+    }else{
+      searchTip.innerHTML = hits.slice(0,6).map(function(h){
+        return '<div>' + h + '</div>';
+      }).join("");
+    }
+    searchTip.classList.add("fu-show");
+  }
+  searchInput.addEventListener("input", function(){ renderSearchTip(searchInput.value); });
+  searchInput.addEventListener("blur", function(){
+    setTimeout(function(){ searchTip.classList.remove("fu-show"); }, 160);
+  });
+  searchInput.addEventListener("focus", function(){
+    if(searchInput.value.trim()) renderSearchTip(searchInput.value);
+  });
+  searchTip.addEventListener("mousedown", function(e){
+    var t = e.target.closest("div");
+    if(t && !t.classList.contains("fu-tip-empty")){
+      searchInput.value = t.textContent;
+      showToast("已为你定位到：" + t.textContent);
+      searchTip.classList.remove("fu-show");
+    }
+  });
+
+  /* ---------- 弹窗 ---------- */
+  var mask = document.getElementById("fuModalMask");
+  var box = document.getElementById("fuModalBox");
+  function openModal(html){
+    box.innerHTML = html;
+    mask.classList.add("fu-show");
+    document.body.style.overflow = "hidden";
+  }
+  function closeModal(){
+    mask.classList.remove("fu-show");
+    document.body.style.overflow = "";
+  }
+  mask.addEventListener("click", function(e){
+    if(e.target === mask) closeModal();
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && mask.classList.contains("fu-show")) closeModal();
+  });
+
+  /* 投稿弹窗 */
+  function openSubmit(){
+    openModal(
+      '<h3>投稿给腐剧tv入口</h3>' +
+      '<p class="fu-modal-sub">填写基本信息，内容运营团队会在五个工作日内与你联系。</p>' +
+      '<label>创作者昵称</label><input type="text" placeholder="请输入昵称" id="fuFName">' +
+      '<label>作品名称</label><input type="text" placeholder="请输入作品名称" id="fuFWork">' +
+      '<label>作品类型</label><select id="fuFType">' +
+        '<option>自制短剧</option><option>幕后纪录</option><option>人物访谈</option>' +
+        '<option>城市探索</option><option>创作灵感</option></select>' +
+      '<label>作品简介</label><textarea placeholder="用一两句话介绍作品的看点" id="fuFDesc"></textarea>' +
+      '<div class="fu-modal-actions">' +
+        '<button class="fu-btn fu-btn-ghost" data-fu-close>取消</button>' +
+        '<button class="fu-btn fu-btn-primary" id="fuFSubmit">提交投稿</button>' +
+      '</div>'
+    );
+    document.getElementById("fuFSubmit").addEventListener("click", function(){
+      var name = document.getElementById("fuFName").value.trim();
+      if(!name){ showToast("请先填写创作者昵称"); return; }
+      closeModal();
+      showToast("投稿已提交，感谢你的信任");
+    });
+    bindCloseButtons();
+  }
+
+  /* 分享弹窗 */
+  function openShare(){
+    openModal(
+      '<h3>分享腐剧tv入口官网</h3>' +
+      '<p class="fu-modal-sub">把喜欢的内容转给同样爱看剧的朋友。</p>' +
+      '<div class="fu-share-list">' +
+        '<button data-share="微信">微信</button>' +
+        '<button data-share="微博">微博</button>' +
+        '<button data-share="QQ">QQ</button>' +
+        '<button data-share="复制链接">复制链接</button>' +
+      '</div>' +
+      '<div class="fu-modal-actions"><button class="fu-btn fu-btn-primary" data-fu-close>完成</button></div>'
+    );
+    bindCloseButtons();
+    box.querySelectorAll("[data-share]").forEach(function(b){
+      b.addEventListener("click", function(){
+        var ch = b.getAttribute("data-share");
+        if(ch === "复制链接"){ copyLink(); }
+        else{
+          closeModal();
+          showToast("已生成" + ch + "分享卡片，请前往对应应用粘贴");
+        }
+      });
+    });
+  }
+
+  /* 创作者加入弹窗 */
+  function openCreatorJoin(){
+    openModal(
+      '<h3>申请成为腐剧tv入口创作者</h3>' +
+      '<p class="fu-modal-sub">面向所有热爱影像的创作者，新人同样欢迎。</p>' +
+      '<label>昵称</label><input type="text" placeholder="你的创作昵称" id="fuCName">' +
+      '<label>擅长方向</label><select id="fuCField">' +
+        '<option>短剧导演</option><option>摄影与灯光</option><option>编剧与文案</option>' +
+        '<option>剪辑后期</option><option>旅拍纪录</option></select>' +
+      '<label>代表作品链接</label><input type="text" placeholder="可填写作品页面地址" id="fuCLink">' +
+      '<div class="fu-modal-actions">' +
+        '<button class="fu-btn fu-btn-ghost" data-fu-close>取消</button>' +
+        '<button class="fu-btn fu-btn-primary" id="fuCSubmit">提交申请</button>' +
+      '</div>'
+    );
+    document.getElementById("fuCSubmit").addEventListener("click", function(){
+      var n = document.getElementById("fuCName").value.trim();
+      if(!n){ showToast("请填写昵称后再提交"); return; }
+      closeModal();
+      showToast("申请已收到，运营同学会尽快联系你");
+    });
+    bindCloseButtons();
+  }
+
+  function bindCloseButtons(){
+    box.querySelectorAll("[data-fu-close]").forEach(function(b){
+      b.addEventListener("click", closeModal);
+    });
+  }
+
+  /* ---------- 复制链接 ---------- */
+  function copyLink(){
+    var text = "腐剧tv入口官方网站 · 高清正版影视内容平台";
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        if(mask.classList.contains("fu-show")) closeModal();
+        showToast("链接信息已复制到剪贴板");
+      }).catch(function(){
+        fallbackCopy(text);
+      });
+    }else{
+      fallbackCopy(text);
+    }
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try{
+      document.execCommand("copy");
+      showToast("链接信息已复制到剪贴板");
+    }catch(e){
+      showToast("复制失败，请手动保存");
+    }
+    document.body.removeChild(ta);
+    if(mask.classList.contains("fu-show")) closeModal();
+  }
+
+  /* ---------- 按钮绑定 ---------- */
+  document.getElementById("fuSubmitBtnTop").addEventListener("click", openSubmit);
+  document.getElementById("fuSubmitBtn").addEventListener("click", openSubmit);
+  document.getElementById("fuCreatorJoin").addEventListener("click", openCreatorJoin);
+  document.getElementById("fuCopyBtn").addEventListener("click", copyLink);
+  document.getElementById("fuShareBtnHero").addEventListener("click", openShare);
+  document.querySelectorAll("[data-fu-share]").forEach(function(b){
+    b.addEventListener("click", openShare);
+  });
+  document.getElementById("fuFocusMore").addEventListener("click", function(){
+    showToast("更多官方推荐将在下周更新");
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById("fuTopBtn");
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 560) topBtn.classList.add("fu-show");
+    else topBtn.classList.remove("fu-show");
+  }, { passive:true });
+  topBtn.addEventListener("click", function(){
+    window.scrollTo({ top:0, behavior:"smooth" });
+  });
+
+  /* ---------- 卡片轻微入场 ---------- */
+  if("IntersectionObserver" in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.style.opacity = "1";
+          en.target.style.transform = "translateY(0)";
+          obs.unobserve(en.target);
+        }
+      });
+    }, { threshold:0.08 });
+    document.querySelectorAll(".fu-video-card, .fu-creator, .fu-review, .fu-topic, .fu-focus-item").forEach(function(el, i){
+      el.style.opacity = "0";
+      el.style.transform = "translateY(16px)";
+      el.style.transition = "opacity .5s ease " + ((i % 4) * 70) + "ms, transform .5s ease " + ((i % 4) * 70) + "ms";
+      obs.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+  </html>
